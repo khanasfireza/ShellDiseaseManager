@@ -1,7 +1,10 @@
 import re
 from datetime import datetime
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__))
+os.chdir(dir_path)
 
-
+# Please run this code using cmd or powershell or terminal
 # This function reads text file and writes to them
 def read_write_file(filename, data, id=True, listedData=None):
     # filename is the name of the text file, data is the value that needs to be written in the file,
@@ -123,14 +126,18 @@ while True:
         currentSymptoms = [each for each in inp.split(',')]
         medicalHistory = input("Medical History: ")
         DateOfBirth = input("Date of birth: ")
+
         # Register the user in the text file
         read_write_file('PatientInfo.txt',
                         f"name:{name},age:{age},registration_time:{datetime.now().strftime('%d/%m/%Y %H:%M:%S')},email:{email},mobile_number:{mobile_number},zone:{zone},address:{address},group:{group}")
+
         read_write_file("PatientCase.txt", f"name:{name},status:active,zone:{zone}")
+
         read_write_file("OptionalPatientInfo.txt",
                         f"name:{name},registration_time:{datetime.now().strftime('%d/%m/%Y %H:%M:%S')},current_symptoms:{currentSymptoms},medical_history:{medicalHistory},date_of_birth:{DateOfBirth}")
 
         print(f"{'-' * 25}")
+
 
     # Provides test information and saves test information in test file
     elif option == "2":
@@ -279,4 +286,6 @@ while True:
             print(
                 f"Patient Name: {patient_name}\nPatient id: {patient_id}\nCase id: {patient_id}\nPatient Status: {re.search('status:(.+?);', reducedCaseData[0])}")
     elif option == '6':
-        quit()
+        break
+
+

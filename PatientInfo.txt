@@ -1,0 +1,1 @@
+id:1,name:pranto,age:2,registration_time:08/06/2020 01:38:06,email:2@g.com,mobile_number:2,zone:B,address:12,group:ATO;
