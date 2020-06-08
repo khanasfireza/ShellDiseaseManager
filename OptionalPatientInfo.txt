@@ -1,1 +1,0 @@
-id:1,name:pranto,registration_time:08/06/2020 01:38:06,current_symptoms:[''],medical_history:,date_of_birth:;
