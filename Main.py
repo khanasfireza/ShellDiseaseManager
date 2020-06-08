@@ -1,4 +1,5 @@
 """
+To run use Python3.7+
 Do not tamper the text file,
 Text file is used as database,
 Patient Case - saves case of patient and shows if the case is active or not
